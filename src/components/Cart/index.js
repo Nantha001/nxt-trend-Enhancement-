@@ -4,6 +4,7 @@ import CartListView from '../CartListView'
 import CartContext from '../../context/CartContext'
 import EmptyCartView from '../EmptyCartView'
 import CartSummary from '../CartSummary'
+import PopupCard from '../PopupCard'
 
 import './index.css'
 
@@ -28,9 +29,10 @@ const Cart = () => (
 
                 <h1 className="cart-heading">My Cart</h1>
                 <CartListView />
-                {/* TODO: Add your code for Cart Summary here */}
+
                 <CartSummary />
-                <button>Checkout</button>
+
+                <PopupCard />
               </div>
             )}
           </div>
