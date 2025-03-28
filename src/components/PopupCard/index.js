@@ -55,12 +55,20 @@ class PopupCard extends Component {
             return (
               <>
                 <Popup
-                  trigger={<button className="btn">Checkout</button>}
+                  trigger={
+                    <button type="button" className="btn">
+                      Checkout
+                    </button>
+                  }
                   modal
                 >
                   {closeBtn => (
                     <div className="popup-card">
-                      <button onClick={() => closeBtn()} className="close-btn">
+                      <button
+                        type="button"
+                        onClick={() => closeBtn()}
+                        className="close-btn"
+                      >
                         x
                       </button>
                       {!isOrder && (
@@ -97,6 +105,7 @@ class PopupCard extends Component {
                             {cartList.length}
                           </p>
                           <button
+                            type="button"
                             onClick={() => this.orderBtnClick()}
                             className={cssStyledDisableBtn(selectOption)}
                             disabled={selectOption !== 'Cash on Delivery'}
